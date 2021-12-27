@@ -22,6 +22,7 @@ npm init react-app my-app cra-template-rrrs
 - styled-components
 - react-router
 - react-query
+- recoil
 
 <div align="center">
   <sub>
