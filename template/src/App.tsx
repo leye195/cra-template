@@ -1,13 +1,19 @@
+import { useState } from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 import Routers from "routes";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "styles";
 
 const App = function () {
+  const [queryClient] = useState(() => new QueryClient());
+
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Routers />
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Routers />
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 };
 
