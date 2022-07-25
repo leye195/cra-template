@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { CommonProps } from "types";
+import type { CommonProps } from "types";
 
 type Props = {
   className?: string;
-  display: "flex" | "inline-flex";
+  display?: "flex" | "inline-flex";
   alignItems?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly";
   justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly";
   direction?: "row" | "column";
